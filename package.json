@@ -1,0 +1,36 @@
+{
+  "name": "turbo-repo",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "build:p": "turbo build --filter './packages/*'",
+    "build:actions": "turbo build --filter './packages/actions'",
+    "dev": "turbo dev --filter './apps/blog'",
+    "dev:g": "turbo dev --filter './apps/grasshopper'",
+    "storybook": "turbo storybook",
+    "push:origin": "git push origin $(git symbolic-ref --short HEAD)",
+    "lint": "turbo lint",
+    "dev:xion": "turbo dev:xion",
+    "test": "turbo run test",
+    "test:ci": "turbo run test:ci",
+    "lint:biome": "npx @biomejs/biome lint .",
+    "check:biome": "npx @biomejs/biome check --write .",
+    "format:biome": "npx @biomejs/biome format --write .",
+    "clean:all": "rm -rf node_modules && rm -rf apps/*/node_modules && rm -rf packages/*/node_modules && pnpm store prune && pnpm install",
+    "comment:ci": "node ./.github/scripts/comment-ci.js"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.3",
+    "@xionwcfm/actions": "workspace:*",
+    "@xionwcfm/typescript-config": "workspace:*",
+    "lefthook": "^1.6.16",
+    "prettier": "^3.2.5",
+    "turbo": "^2.2.1",
+    "typescript": "^5.6.2",
+    "vitest": "^2.0.5"
+  },
+  "packageManager": "pnpm@9.12.0",
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "@xionwcfm/adapters",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "exports": {
+    "./link": {
+      "import": {
+        "types": "./dist/link.d.mts",
+        "default": "./dist/link.mjs"
+      },
+      "require": {
+        "types": "./dist/link.d.ts",
+        "default": "./dist/link.js"
+      }
+    },
+    "./image": {
+      "import": {
+        "types": "./dist/image.d.mts",
+        "default": "./dist/image.mjs"
+      },
+      "require": {
+        "types": "./dist/image.d.ts",
+        "default": "./dist/image.js"
+      }
+    },
+    "./router": {
+      "import": {
+        "types": "./dist/router.d.mts",
+        "default": "./dist/router.mjs"
+      },
+      "require": {
+        "types": "./dist/router.d.ts",
+        "default": "./dist/router.js"
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18",
+    "@xionwcfm/typescript-config": "workspace:*",
+    "next": "15.0.0-rc.0",
+    "tsup": "^8.1.0",
+    "typescript": "latest"
+  },
+  "peerDependencies": {
+    "next": "^14",
+    "react": "^18"
+  }
+}
