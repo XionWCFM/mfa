@@ -2,8 +2,6 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 
-const UserConfigBase = "../host";
-
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -12,12 +10,12 @@ export default defineConfig({
       targets: [
         {
           src: "./dist/mf-header.min.js",
-          dest: "../../../public/vendor",
+          dest: "../../public/vendor",
         },
       ],
     }),
   ],
-  base: UserConfigBase,
+  base: "",
   build: {
     cssCodeSplit: false,
     rollupOptions: {
