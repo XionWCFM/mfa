@@ -16,12 +16,17 @@
     "check:biome": "npx @biomejs/biome check --write .",
     "format:biome": "npx @biomejs/biome format --write .",
     "clean:all": "rm -rf node_modules && rm -rf apps/*/node_modules && rm -rf packages/*/node_modules && pnpm store prune && pnpm install",
-    "comment:ci": "node ./.github/scripts/comment-ci.js"
+    "comment:ci": "node ./.github/scripts/comment-ci.js",
+    "serve": "pnpm --parallel --filter \"./**\" preview",
+    "build:remotes": "pnpm --parallel --filter \"./remote\" build",
+    "serve:remotes": "pnpm --parallel --filter \"./remote\" serve",
+    "dev:hosts": "pnpm --filter \"./host\" dev",
+    "stop": "kill-port --port 5000,5001"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.3",
-    "@xionwcfm/actions": "workspace:*",
     "@xionwcfm/typescript-config": "workspace:*",
+    "kill-port": "^2.0.1",
     "lefthook": "^1.6.16",
     "prettier": "^3.2.5",
     "turbo": "^2.2.1",

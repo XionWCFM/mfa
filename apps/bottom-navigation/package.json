@@ -1,13 +1,13 @@
 {
-  "name": "host",
+  "name": "gnb",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 5000 --strictPort",
+    "dev": "vite --port 5001 --strictPort",
     "build": "vite build",
-    "preview": "vite preview --port 5000 --strictPort",
-    "serve": "vite preview --port 5000 --strictPort"
+    "preview": "vite preview --port 5001 --strictPort",
+    "serve": "vite preview --port 5001 --strictPort"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -20,7 +20,6 @@
     "@vitejs/plugin-react-swc": "^3.5.0",
     "globals": "^15.11.0",
     "typescript": "~5.6.2",
-    "typescript-eslint": "^8.10.0",
     "vite": "^5.4.9"
   }
 }

@@ -2,14 +2,14 @@ import federation from "@originjs/vite-plugin-federation";
 import react from "@vitejs/plugin-react-swc";
 import { defineConfig } from "vite";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "app",
-      remotes: {
-        "@mf-xion-bn": "http://localhost:5001/assets/remoteEntry.js",
+      name: "@mf-xion-bn",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./bottom-navigation": "./src/bottom-navigation.tsx",
       },
       shared: ["react", "react-dom"],
     }),
