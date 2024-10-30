@@ -4,21 +4,29 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 5000 --strictPort",
+    "dev": "vite --port 5200 --strictPort",
     "build": "vite build",
-    "preview": "vite preview --port 5000 --strictPort",
-    "serve": "vite preview --port 5000 --strictPort"
+    "preview": "vite preview --port 5100 --strictPort",
+    "serve": "vite preview --port 5100 --strictPort"
   },
   "dependencies": {
+    "@suspensive/react": "^2.18.4",
+    "@xionwcfm/react": "^0.0.9",
+    "@xionwcfm/token": "^0.0.9",
+    "@xionwcfm/xds": "^0.1.10",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0"
   },
   "devDependencies": {
     "@originjs/vite-plugin-federation": "^1.3.6",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react-swc": "^3.5.0",
+    "autoprefixer": "^10.4.20",
     "globals": "^15.11.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.1",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.10.0",
     "vite": "^5.4.9"

@@ -11,7 +11,14 @@ export default defineConfig({
       exposes: {
         "./bottom-navigation": "./src/bottom-navigation.tsx",
       },
-      shared: ["react", "react-dom"],
+      shared: [
+        "react",
+        "react-dom",
+        "@xionwcfm/xds",
+        "@xionwcfm/xds/style",
+        "@xionwcfm/token",
+        "@xionwcfm/token/style",
+      ],
     }),
   ],
   build: {

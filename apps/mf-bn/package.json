@@ -1,15 +1,17 @@
 {
-  "name": "mf-xion-bn",
+  "name": "mf-bn",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 5001 --strictPort",
+    "dev": "vite --port 5101 --strictPort",
     "build": "vite build",
-    "preview": "vite preview --port 5001 --strictPort",
-    "serve": "vite preview --port 5001 --strictPort"
+    "preview": "vite preview --port 5101 --strictPort",
+    "serve": "vite preview --port 5101 --strictPort"
   },
   "dependencies": {
+    "@xionwcfm/token": "^0.0.9",
+    "@xionwcfm/xds": "^0.1.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

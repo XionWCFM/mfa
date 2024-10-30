@@ -6,7 +6,7 @@
     "watch:browser": "node bs-config.js",
     "watch": "turbo run build -- --watch",
     "serve": "pnpm --parallel --filter \"./**\" preview",
-
+    "stop": "kill-port --port 5099,5100,5101,5102",
     "build": "turbo build",
     "build:p": "turbo build --filter './packages/*'",
     "build:actions": "turbo build --filter './packages/actions'",
@@ -23,8 +23,7 @@
     "comment:ci": "node ./.github/scripts/comment-ci.js",
     "build:remotes": "pnpm --parallel --filter \"./remote\" build",
     "serve:remotes": "pnpm --parallel --filter \"./remote\" serve",
-    "dev:hosts": "pnpm --filter \"./host\" dev",
-    "stop": "kill-port --port 5000,5001"
+    "dev:hosts": "pnpm --filter \"./host\" dev"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.3",
