@@ -3,7 +3,7 @@ import BottomNavigation from "@mf-xion-bn/bottom-navigation";
 function App() {
   return (
     <div>
-      <div>hdasedsadsallo</div>
+      <div>hdasedsadsaddsallo</div>
       <BottomNavigation />
     </div>
   );

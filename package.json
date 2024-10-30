@@ -2,6 +2,11 @@
   "name": "turbo-repo",
   "private": true,
   "scripts": {
+    "dev:mf": "concurrently \"pnpm watch\" \"pnpm watch:browser\" \"pnpm serve\"",
+    "watch:browser": "node bs-config.js",
+    "watch": "turbo run build -- --watch",
+    "serve": "pnpm --parallel --filter \"./**\" preview",
+
     "build": "turbo build",
     "build:p": "turbo build --filter './packages/*'",
     "build:actions": "turbo build --filter './packages/actions'",
@@ -9,7 +14,6 @@
     "storybook": "turbo storybook",
     "push:origin": "git push origin $(git symbolic-ref --short HEAD)",
     "lint": "turbo lint",
-    "dev:xion": "turbo dev:xion",
     "test": "turbo run test",
     "test:ci": "turbo run test:ci",
     "lint:biome": "npx @biomejs/biome lint .",
@@ -17,7 +21,6 @@
     "format:biome": "npx @biomejs/biome format --write .",
     "clean:all": "rm -rf node_modules && rm -rf apps/*/node_modules && rm -rf packages/*/node_modules && pnpm store prune && pnpm install",
     "comment:ci": "node ./.github/scripts/comment-ci.js",
-    "serve": "pnpm --parallel --filter \"./**\" preview",
     "build:remotes": "pnpm --parallel --filter \"./remote\" build",
     "serve:remotes": "pnpm --parallel --filter \"./remote\" serve",
     "dev:hosts": "pnpm --filter \"./host\" dev",
@@ -26,6 +29,8 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.3",
     "@xionwcfm/typescript-config": "workspace:*",
+    "browser-sync": "^3.0.3",
+    "concurrently": "^9.0.1",
     "kill-port": "^2.0.1",
     "lefthook": "^1.6.16",
     "prettier": "^3.2.5",
