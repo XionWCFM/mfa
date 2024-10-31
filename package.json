@@ -30,7 +30,7 @@
     "@xionwcfm/typescript-config": "workspace:*",
     "browser-sync": "^3.0.3",
     "concurrently": "^9.0.1",
-    "kill-port": "^2.0.1",
+    "kill-port": "^1.6.1",
     "lefthook": "^1.6.16",
     "prettier": "^3.2.5",
     "turbo": "^2.2.1",
