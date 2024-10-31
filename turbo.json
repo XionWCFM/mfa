@@ -25,10 +25,9 @@
     "storybook": {
       "cache": false,
       "persistent": true
-    },
-    "dev:xion": {
-      "cache": false,
-      "persistent": true
     }
+  },
+  "remoteCache": {
+    "enabled": true
   }
 }
