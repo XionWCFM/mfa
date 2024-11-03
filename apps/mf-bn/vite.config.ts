@@ -18,6 +18,8 @@ export default defineConfig({
         "@xionwcfm/xds/style",
         "@xionwcfm/token",
         "@xionwcfm/token/style",
+        "@radix-ui/react-icons",
+        "react-router-dom",
       ],
     }),
   ],

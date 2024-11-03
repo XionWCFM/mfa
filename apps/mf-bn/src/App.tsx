@@ -1,5 +1,7 @@
+import BottomNavigation from "./bottom-navigation";
+
 function App() {
-  return <div>hello</div>;
+  return <BottomNavigation />;
 }
 
 export default App;
