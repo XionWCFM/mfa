@@ -6,5 +6,5 @@ browserSync.init({
     "**/remoteEntry.js", // 리모트 빌드 파일 경로
   ],
   port: 5099,
-  reloadDelay: 10, // 새로고침 딜레이
+  reloadDelay: 0, // 새로고침 딜레이
 });

@@ -9,9 +9,7 @@ export default defineConfig({
       name: "@mf-xion-todo",
       filename: "remoteEntry.js",
       exposes: {
-        "./todo-root-page": "./src/exposes/todo-root-page.tsx",
-        "./todo-write-page": "./src/exposes/todo-write-page.tsx",
-        "./todo-detail-page": "./src/exposes/todo-detail-page.tsx",
+        "./todo-list-widget": "./src/@exposes/todo-list-widget.tsx",
       },
       shared: ["react", "react-dom", "react-router-dom"],
     }),
