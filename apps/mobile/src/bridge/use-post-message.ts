@@ -9,6 +9,6 @@ export const usePostMessage = () => {
     <T extends string, Payload>(message: EventStructure<T, Payload>) => {
       webViewRef.current?.postMessage(codec.encode(message));
     },
-    [webViewRef.current]
+    [webViewRef.current],
   );
 };

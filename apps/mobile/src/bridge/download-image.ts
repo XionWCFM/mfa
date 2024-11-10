@@ -4,11 +4,7 @@ import { Alert, Linking } from "react-native";
 
 export type DownloadImageReturn =
   | {
-      status:
-        | "permission_denied"
-        | "permission_required"
-        | "canceled"
-        | "download_failed";
+      status: "permission_denied" | "permission_required" | "canceled" | "download_failed";
       success: false;
     }
   | {
@@ -41,7 +37,7 @@ export const downloadImage = async (url: string) => {
 
     const downloadResumable = await FileSystem.downloadAsync(
       url,
-      `${FileSystem.cacheDirectory}image_${new Date().getTime()}.jpg`
+      `${FileSystem.cacheDirectory}image_${new Date().getTime()}.jpg`,
     );
     if (downloadResumable.status === 200) {
       await MediaLibrary.saveToLibraryAsync(downloadResumable.uri);

@@ -1,6 +1,6 @@
+import { Link } from "expo-router";
 import { Button as NButton, Text, View } from "react-native";
 import { Vertical } from "../ui/vertical";
-import { Link } from "expo-router";
 
 export const Hi = () => {
   return (

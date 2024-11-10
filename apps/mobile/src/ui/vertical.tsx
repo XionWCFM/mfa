@@ -1,6 +1,6 @@
 import { ComponentProps } from "react";
-import { cn } from "./cn";
 import { Box } from "./box";
+import { cn } from "./cn";
 
 type Props = ComponentProps<typeof Box> & { scrollable?: boolean };
 

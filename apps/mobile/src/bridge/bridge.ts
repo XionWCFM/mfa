@@ -1,4 +1,4 @@
-import { createWebView, bridge } from "@webview-bridge/react-native";
+import { bridge, createWebView } from "@webview-bridge/react-native";
 
 // Register functions in the bridge object in your React Native code
 export const appBridge = bridge({

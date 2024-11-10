@@ -9,12 +9,7 @@ type Props = {
 export const Dialog = (props: Props) => {
   const { isOpen, onClose, children } = props;
   return (
-    <Modal
-      visible={isOpen}
-      onRequestClose={onClose}
-      transparent={true}
-      animationType="fade"
-    >
+    <Modal visible={isOpen} onRequestClose={onClose} transparent={true} animationType="fade">
       {children}
     </Modal>
   );

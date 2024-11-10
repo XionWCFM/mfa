@@ -1,24 +1,19 @@
 import {
-  useFonts,
   NotoSansKR_100Thin,
   NotoSansKR_300Light,
   NotoSansKR_400Regular,
   NotoSansKR_500Medium,
   NotoSansKR_700Bold,
+  useFonts,
 } from "@expo-google-fonts/noto-sans-kr";
 
+import { usePullToRefresh } from "@/src/hooks/use-pull-to-refresh";
+import { ErrorBoundary } from "@suspensive/react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import * as SplashScreen from "expo-splash-screen";
 import { PropsWithChildren, Suspense, useEffect } from "react";
-import {
-  ScrollView,
-  RefreshControl,
-  Platform,
-  KeyboardAvoidingView,
-} from "react-native";
+import { KeyboardAvoidingView, Platform, RefreshControl, ScrollView } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import { usePullToRefresh } from "@/src/hooks/use-pull-to-refresh";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ErrorBoundary } from "@suspensive/react";
 import { WebViewProvider } from "./webview/web-view-context";
 
 const queryClient = new QueryClient({
@@ -37,9 +32,7 @@ export function Providers({ children }: PropsWithChildren) {
               <FontProvider>
                 <WebViewProvider>
                   <RefreshProvider>
-                    <KeyboardAvoidingProvider>
-                      {children}
-                    </KeyboardAvoidingProvider>
+                    <KeyboardAvoidingProvider>{children}</KeyboardAvoidingProvider>
                   </RefreshProvider>
                 </WebViewProvider>
               </FontProvider>
@@ -53,10 +46,7 @@ export function Providers({ children }: PropsWithChildren) {
 
 const KeyboardAvoidingProvider = ({ children }: PropsWithChildren) => {
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === "ios" ? "padding" : undefined}
-      style={{ flex: 1 }}
-    >
+    <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined} style={{ flex: 1 }}>
       {children}
     </KeyboardAvoidingView>
   );
@@ -67,9 +57,7 @@ const RefreshProvider = ({ children }: PropsWithChildren) => {
   return (
     <ScrollView
       contentContainerStyle={{ flex: 1 }}
-      refreshControl={
-        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
-      }
+      refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
     >
       {children}
     </ScrollView>

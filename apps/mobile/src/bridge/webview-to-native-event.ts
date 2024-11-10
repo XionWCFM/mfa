@@ -12,4 +12,3 @@ const WEBVIEW_TO_NATIVE_EVENT_LIST = [
 export type WebviewToNativeEvent = (typeof WEBVIEW_TO_NATIVE_EVENT_LIST)[number];
 export const WEBVIEW_TO_NATIVE_EVENT = createEnum(WEBVIEW_TO_NATIVE_EVENT_LIST);
 export const validateWebviewToNativeEvent = validate<WebviewToNativeEvent>(z.enum(WEBVIEW_TO_NATIVE_EVENT_LIST));
-

@@ -2,9 +2,7 @@ import * as ImagePicker from "expo-image-picker";
 import { useCallback } from "react";
 import { Alert, Linking } from "react-native";
 
-type ImageAsset = NonNullable<
-  ImagePicker.ImagePickerResult["assets"]
->[number] & {
+type ImageAsset = NonNullable<ImagePicker.ImagePickerResult["assets"]>[number] & {
   base64: string;
 };
 
