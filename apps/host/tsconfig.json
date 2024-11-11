@@ -4,6 +4,7 @@
     "declaration": false,
     "module": "ESNext",
     "moduleResolution": "Bundler",
+    "types": ["vitest", "@testing-library/jest-dom"],
     "jsx": "preserve",
     "skipLibCheck": true,
     "baseUrl": "./",
