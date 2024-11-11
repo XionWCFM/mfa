@@ -1,6 +1,6 @@
 import { SharedWebView } from "./web-view-context";
 
-const BASE_URL = __DEV__ ? "http://localhost:3000" : "";
+const BASE_URL = __DEV__ ? "http://localhost:5100" : "";
 const DECELERATION_RATE = 0.999;
 const JAVASCRIPT_BEFORE_CONTENTLOADED = `window.__APP_DEV__="${__DEV__ ? "development" : "production"}";`;
 

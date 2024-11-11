@@ -1,5 +1,6 @@
 import { Text } from "react-native";
+import { WebViewInstance } from "@/src/webview/web-view-instance";
 
 export default function Page() {
-  return <Text className=" text-20 py-12 px-24 bg-primaryAlpha-200 text-primary-600">Top-level page</Text>;
+  return <WebViewInstance/>;
 }
