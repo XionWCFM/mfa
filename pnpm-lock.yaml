@@ -283,6 +283,9 @@ importers:
       '@module-federation/enhanced':
         specifier: ^0.7.1
         version: 0.7.1(react-dom@18.3.1)(react@18.3.1)(typescript@5.6.3)
+      '@webview-bridge/web':
+        specifier: ^1.7.2
+        version: 1.7.2
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -290,6 +293,9 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
     devDependencies:
+      '@mf-xion/mobile':
+        specifier: workspace:^
+        version: link:../mobile
       '@module-federation/rsbuild-plugin':
         specifier: ^0.7.1
         version: 0.7.1(@module-federation/enhanced@0.7.1)(@rsbuild/core@1.1.0)
@@ -2460,7 +2466,7 @@ packages:
 
   /@expo/bunyan@4.0.1:
     resolution: {integrity: sha512-+Lla7nYSiHZirgK+U/uYzsLv/X+HaJienbD5AKX1UQZHYfWaP+9uuQluRB4GrEVWF0GZ7vEVp/jzaOT9k/SQlg==}
-    engines: {node: '>=0.10.0'}
+    engines: {'0': node >=0.10.0}
     dependencies:
       uuid: 8.3.2
     dev: false
@@ -7128,6 +7134,13 @@ packages:
 
   /@webview-bridge/utils@1.7.2:
     resolution: {integrity: sha512-AYSAje/UFrtCYzhVs4qrNLJ6Ty23/S3zi3JV/SJzA9VUiP+iN6nzH3unT27fRfQXIzjwQ9C7g/7sQ7sorL2rJw==}
+    dev: false
+
+  /@webview-bridge/web@1.7.2:
+    resolution: {integrity: sha512-wr3JnXcf5w9iw9K6Pf6nBWite7qMZmVPm48wHAnG6UgwGP6nj5Ilvk8Rnuv/0V/bTfDXbOWV50niKfJjj5MtwQ==}
+    dependencies:
+      '@webview-bridge/types': 1.7.2
+      '@webview-bridge/utils': 1.7.2
     dev: false
 
   /@xionwcfm/jotai@0.1.5(jotai@2.10.1)(react-dom@18.2.0)(react@18.2.0):
