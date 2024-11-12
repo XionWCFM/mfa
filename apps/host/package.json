@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@internal/http": "workspace:*",
+    "@internal/router": "workspace:*",
     "@internal/providers": "workspace:*",
     "@xionwcfm/typescript-config": "workspace:*",
     "@hookform/resolvers": "^3.9.1",

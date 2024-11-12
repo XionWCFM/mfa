@@ -1,39 +1,42 @@
-import { DefaultProps, DefaultPropsProvider, ErrorBoundary, Suspense } from "@suspensive/react";
-import { QueryClient, QueryClientProvider, QueryErrorResetBoundary } from "@tanstack/react-query";
-import { Provider } from "jotai";
-import { OverlayProvider } from "overlay-kit";
-import { PropsWithChildren, useState } from "react";
+import { Providers as DefaultProviders } from "@internal/providers";
+import { LocationContext, ParamsContext, RouteErrorContext, Router, RouterContext } from "@internal/router";
+import { useLocation, useNavigate, useParams, useRouteError } from "@modern-js/runtime/router";
+import { PropsWithChildren, useMemo } from "react";
 
 export const Providers = ({ children }: PropsWithChildren) => {
-  const [defaultProps] = useState(() => new DefaultProps({ Delay: { ms: 200 } }));
-  const [queryClient] = useState(
-    () =>
-      new QueryClient({
-        defaultOptions: {
-          queries: {
-            throwOnError: true,
-            staleTime: 1000 * 60 * 5,
-            gcTime: 1000 * 60 * 10,
-            retry: 3,
-          },
-        },
-      }),
-  );
   return (
-    <QueryClientProvider client={queryClient}>
-      <Provider>
-        <DefaultPropsProvider defaultProps={defaultProps}>
-          <OverlayProvider>
-            <QueryErrorResetBoundary>
-              {({ reset }) => (
-                <ErrorBoundary onReset={reset} fallback={<div>error</div>}>
-                  <Suspense fallback={<div>loading</div>}>{children}</Suspense>
-                </ErrorBoundary>
-              )}
-            </QueryErrorResetBoundary>
-          </OverlayProvider>
-        </DefaultPropsProvider>
-      </Provider>
-    </QueryClientProvider>
+    <DefaultProviders>
+      <RouterProviders>{children}</RouterProviders>
+    </DefaultProviders>
+  );
+};
+
+const RouterProviders = ({ children }: PropsWithChildren) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const params = useParams();
+  const error = useRouteError();
+
+  const router: Router = useMemo(() => {
+    return {
+      push: (to, options) => {
+        navigate(to, { ...options });
+      },
+      replace: (to, options) => {
+        navigate(to, { ...options, replace: true });
+      },
+      back: (delta) => {
+        navigate(delta ?? -1);
+      },
+    };
+  }, [navigate]);
+  return (
+    <RouterContext.Provider value={router}>
+      <LocationContext.Provider value={location}>
+        <ParamsContext.Provider value={params}>
+          <RouteErrorContext.Provider value={error}>{children}</RouteErrorContext.Provider>
+        </ParamsContext.Provider>
+      </LocationContext.Provider>
+    </RouterContext.Provider>
   );
 };

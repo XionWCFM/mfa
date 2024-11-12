@@ -1,11 +1,15 @@
 {
-  "name": "@internal/providers",
+  "name": "@internal/router",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {},
   "exports": {
-    ".": "./src/index.tsx"
+    ".": "./src/index.ts",
+    "./router-error": "./src/router-error.ts",
+    "./location": "./src/location.ts",
+    "./params": "./src/params.ts",
+    "./router": "./src/router.ts"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",
@@ -15,10 +19,6 @@
   },
   "peerDependencies": {
     "react": ">=18",
-    "react-dom": ">=18",
-    "@suspensive/react": ">=2",
-    "@tanstack/react-query": ">=5",
-    "jotai": ">=2",
-    "overlay-kit": ">=1"
+    "react-dom": ">=18"
   }
 }

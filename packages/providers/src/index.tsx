@@ -26,8 +26,8 @@ export const Providers = ({ children }: PropsWithChildren) => {
           <OverlayProvider>
             <QueryErrorResetBoundary>
               {({ reset }) => (
-                <ErrorBoundary onReset={reset} fallback={<div>error</div>}>
-                  <Suspense fallback={<div>loading</div>}>{children}</Suspense>
+                <ErrorBoundary onReset={reset} fallback={null}>
+                  <Suspense fallback={null}>{children}</Suspense>
                 </ErrorBoundary>
               )}
             </QueryErrorResetBoundary>

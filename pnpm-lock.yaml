@@ -47,6 +47,9 @@ importers:
       '@internal/providers':
         specifier: workspace:*
         version: link:../../packages/providers
+      '@internal/router':
+        specifier: workspace:*
+        version: link:../../packages/router
       '@modern-js/runtime':
         specifier: 2.61.0
         version: 2.61.0(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -483,6 +486,28 @@ importers:
       overlay-kit:
         specifier: '>=1'
         version: 1.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.12
+        version: 18.3.12
+      '@types/react-dom':
+        specifier: ^18.3.1
+        version: 18.3.1
+      '@xionwcfm/typescript-config':
+        specifier: workspace:*
+        version: link:../../configs/typescript
+      typescript:
+        specifier: ~5.6.2
+        version: 5.6.3
+
+  packages/router:
+    dependencies:
+      react:
+        specifier: '>=18'
+        version: 18.3.1
+      react-dom:
+        specifier: '>=18'
+        version: 18.3.1(react@18.3.1)
     devDependencies:
       '@types/react':
         specifier: ^18.3.12
