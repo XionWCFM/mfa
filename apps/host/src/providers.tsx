@@ -6,17 +6,19 @@ import { PropsWithChildren, useMemo } from "react";
 export const Providers = ({ children }: PropsWithChildren) => {
   return (
     <DefaultProviders>
-      <RouterProviders>{children}</RouterProviders>
+      <RouterProvider>
+        <RouteErrorProvider>
+          <ParamsProvider>
+            <LocationProvider>{children}</LocationProvider>
+          </ParamsProvider>
+        </RouteErrorProvider>
+      </RouterProvider>
     </DefaultProviders>
   );
 };
 
-const RouterProviders = ({ children }: PropsWithChildren) => {
+const RouterProvider = ({ children }: PropsWithChildren) => {
   const navigate = useNavigate();
-  const location = useLocation();
-  const params = useParams();
-  const error = useRouteError();
-
   const router: Router = useMemo(() => {
     return {
       push: (to, options) => {
@@ -30,13 +32,20 @@ const RouterProviders = ({ children }: PropsWithChildren) => {
       },
     };
   }, [navigate]);
-  return (
-    <RouterContext.Provider value={router}>
-      <LocationContext.Provider value={location}>
-        <ParamsContext.Provider value={params}>
-          <RouteErrorContext.Provider value={error}>{children}</RouteErrorContext.Provider>
-        </ParamsContext.Provider>
-      </LocationContext.Provider>
-    </RouterContext.Provider>
-  );
+  return <RouterContext.Provider value={router}>{children}</RouterContext.Provider>;
+};
+
+const RouteErrorProvider = ({ children }: PropsWithChildren) => {
+  const error = useRouteError();
+  return <RouteErrorContext.Provider value={error}>{children}</RouteErrorContext.Provider>;
+};
+
+const ParamsProvider = ({ children }: PropsWithChildren) => {
+  const params = useParams();
+  return <ParamsContext.Provider value={params}>{children}</ParamsContext.Provider>;
+};
+
+const LocationProvider = ({ children }: PropsWithChildren) => {
+  const location = useLocation();
+  return <LocationContext.Provider value={location}>{children}</LocationContext.Provider>;
 };
