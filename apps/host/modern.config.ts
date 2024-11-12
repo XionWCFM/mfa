@@ -14,4 +14,9 @@ export default defineConfig({
     }),
     moduleFederationPlugin(),
   ],
+  deploy: {
+    microFrontend: {
+      enableHtmlEntry: true,
+    },
+  },
 });
