@@ -12,6 +12,7 @@
     "@module-federation/enhanced": "^0.7.1",
     "@internal/bridge": "workspace:*",
     "@internal/bridge-web": "workspace:*",
+    "@internal/router": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

@@ -50,6 +50,9 @@ importers:
       '@internal/router':
         specifier: workspace:*
         version: link:../../packages/router
+      '@modern-js/plugin-garfish':
+        specifier: 2.61.0
+        version: 2.61.0(@modern-js/runtime@2.61.0(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@modern-js/runtime':
         specifier: 2.61.0
         version: 2.61.0(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -104,7 +107,7 @@ importers:
         version: link:../../packages/test-utils
       '@modern-js/app-tools':
         specifier: 2.61.0
-        version: 2.61.0(@rspack/core@1.1.0(@swc/helpers@0.5.13))(@swc/core@1.7.40(@swc/helpers@0.5.13))(encoding@0.1.13)(lightningcss@1.28.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@5.3.11(@babel/core@7.26.0)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(ts-node@10.9.2(@swc/core@1.7.40(@swc/helpers@0.5.13))(@types/node@18.11.19)(typescript@5.0.4))(tsconfig-paths@4.2.0)(type-fest@4.26.1)(typescript@5.0.4)
+        version: 2.61.0(@rspack/core@1.1.0(@swc/helpers@0.5.13))(@swc/core@1.7.40(@swc/helpers@0.5.13))(@types/webpack@4.41.40)(encoding@0.1.13)(lightningcss@1.28.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@5.3.11(@babel/core@7.26.0)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(ts-node@10.9.2(@swc/core@1.7.40(@swc/helpers@0.5.13))(@types/node@18.11.19)(typescript@5.0.4))(tsconfig-paths@4.2.0)(type-fest@4.26.1)(typescript@5.0.4)
       '@modern-js/tsconfig':
         specifier: 2.61.0
         version: 2.61.0
@@ -337,6 +340,9 @@ importers:
       '@internal/bridge-web':
         specifier: workspace:*
         version: link:../../packages/bridge-web
+      '@internal/router':
+        specifier: workspace:*
+        version: link:../../packages/router
       '@module-federation/enhanced':
         specifier: ^0.7.1
         version: 0.7.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3)(webpack@5.96.1)
@@ -486,6 +492,12 @@ importers:
       overlay-kit:
         specifier: '>=1'
         version: 1.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react:
+        specifier: '>=18'
+        version: 18.3.1
+      react-dom:
+        specifier: '>=18'
+        version: 18.3.1(react@18.3.1)
     devDependencies:
       '@types/react':
         specifier: ^18.3.12
@@ -550,6 +562,9 @@ packages:
 
   '@adobe/css-tools@4.4.0':
     resolution: {integrity: sha512-Ff9+ksdQQB3rMncgqDK78uLznstjyfIf2Arnh22pW8kBpLs6rpKDwgnZT46hin5Hl1WzazzK64DOrhSwYpS7bQ==}
+
+  '@alioth-org/es-module-lexer@1.1.0':
+    resolution: {integrity: sha512-2GrWjl8Whptm2Za2Zx+z8dm8Dz62hLWy1KPYEyplil4m28c6OR900iHNrYAYXS9QFCO1tqMABrl1daj6Mt66QQ==}
 
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
@@ -1826,6 +1841,27 @@ packages:
   '@floating-ui/utils@0.2.8':
     resolution: {integrity: sha512-kym7SodPp8/wloecOpcmSnWJsK7M0E5Wg8UcFA+uO4B9s5d0ywXOEro/8HM9x0rW+TljRzul/14UYz3TleT3ig==}
 
+  '@garfish/browser-snapshot@1.19.3':
+    resolution: {integrity: sha512-8XmrA/fin4wlAhvXpBetBqCsCYE/BEbauKRAVUipASZ5YRK9ooQuLcJA8KIBN7QuGROoepgCRmcDRAODk1Cdbw==}
+
+  '@garfish/browser-vm@1.19.3':
+    resolution: {integrity: sha512-LuLPt81IYy8LheZmqFRKixzO4DwFdfj9Z1UuSQe7EaJqwC3X8ot+dsUtyA1iAv0HypB2Int4KSxKaDu6OLN4CQ==}
+
+  '@garfish/core@1.19.3':
+    resolution: {integrity: sha512-BEIG5WXyPuLnuPggGy7JlRa7KfICViEs80f/xckOkvmH4DbJAfUCtOnfQR//ltffnQenA/nbBR3YoFv02YDIHw==}
+
+  '@garfish/hooks@1.19.3':
+    resolution: {integrity: sha512-cxbxZ7P0LFmExGkaze+CIQz0Be1dNqXbaRl2K5lZoD3YRXDjBZfMJS8i5/P7vaKuKm8u/67JxRJZxgV0YcDsBQ==}
+
+  '@garfish/loader@1.19.3':
+    resolution: {integrity: sha512-SUVfmb36ODRGBuT7ezQGYzsSvPHV6eL+MBDMu78lqBZUsarj//5HtodB7O4jh9LdsgAXQoITRb9zhizUmwHwrw==}
+
+  '@garfish/router@1.19.3':
+    resolution: {integrity: sha512-PttQ27K4R5dWNIlk+y2e+8V/sW6bCYP4YZtsEbHUG+sMp3axhSLnJsg5dg8VUhzqqA+Kamva2hAWeqkRbwpk0A==}
+
+  '@garfish/utils@1.19.3':
+    resolution: {integrity: sha512-FxVOCwEXTOANWKgnAMoTXccrGYgoRcfOPlJ+uCvitM/Jyx29egpUbUHbYabpJequGJkBQLr1/dwdwXTw2fngsg==}
+
   '@graphql-typed-document-node/core@3.2.0':
     resolution: {integrity: sha512-mB9oAsNCm9aM3/SOv4YtBMqZbYj10R7dkq8byBqxGY/ncFwhf2oQzMV+LCRlWoDSEBJ3COiR1yeDvMtsoOsuFQ==}
     peerDependencies:
@@ -2090,6 +2126,13 @@ packages:
     engines: {node: '>=16.2.0'}
     peerDependencies:
       react: '>=17.0.0'
+
+  '@modern-js/plugin-garfish@2.61.0':
+    resolution: {integrity: sha512-RWelvZ8P+oIrhFrkYr+2xKTO+gmfqYlgKYroZsN21z/zV5qw4bIEwsoavE7wOlKvkucKEvqn05nPql6R8oxp6Q==}
+    peerDependencies:
+      '@modern-js/runtime': ^2.61.0
+      react: '>=17'
+      react-dom: '>=17'
 
   '@modern-js/plugin-i18n@2.61.0':
     resolution: {integrity: sha512-XZuYvSG73fKD8V3ysCnZc0If0Ie/Cgx6XdGpK5kl7UTlaFM7iSVg30TNAYDSPqa07Ohflk1MXa3EKlUVptgU4Q==}
@@ -3633,6 +3676,9 @@ packages:
   '@types/cors@2.8.17':
     resolution: {integrity: sha512-8CGDvrBj1zgo2qE+oS3pOCyYNqCPryMWY2bGfwA0dcfopWGgxs+78df0Rs3rc9THP4JkOhLsAa+15VdpAqkcUA==}
 
+  '@types/debug@4.1.12':
+    resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
+
   '@types/eslint-scope@3.7.7':
     resolution: {integrity: sha512-MzMFlSLBqNF2gcHWO0G1vP/YQyfvrxZ0bF+u7mzUdZ1/xK4A4sru+nraZz5i3iEIk1l1uyicaDVTB4QbbEkAYg==}
 
@@ -3681,6 +3727,9 @@ packages:
   '@types/loadable__component@5.13.9':
     resolution: {integrity: sha512-QWOtIkwZqHNdQj3nixQ8oyihQiTMKZLk/DNuvNxMSbTfxf47w+kqcbnxlUeBgAxdOtW0Dh48dTAIp83iJKtnrQ==}
 
+  '@types/ms@0.7.34':
+    resolution: {integrity: sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==}
+
   '@types/node-forge@1.3.11':
     resolution: {integrity: sha512-FQx220y22OKNTqaByeBGqHWYz4cl94tpcxeFdvBo3wjG6XPBuZ0BNgNZRV5J5TFmmcsJ4IzsLkmGRiQbnYsBEQ==}
 
@@ -3702,6 +3751,9 @@ packages:
   '@types/react-helmet@6.1.11':
     resolution: {integrity: sha512-0QcdGLddTERotCXo3VFlUSWO3ztraw8nZ6e3zJSgG7apwV5xt+pJUS8ewPBqT4NYB1optGLprNQzFleIY84u/g==}
 
+  '@types/react-loadable@5.5.11':
+    resolution: {integrity: sha512-/tq2IJ853MoIFRBmqVOxnGsRRjER5TmEKzsZtaAkiXAWoDeKgR/QNOT1vd9k0p9h/F616X21cpNh3hu4RutzRQ==}
+
   '@types/react@18.2.79':
     resolution: {integrity: sha512-RwGAGXPl9kSXwdNTafkOEuFrTBD5SA2B3iEB96xi8+xu5ddUa/cpvyVCSNn+asgLCTHkb5ZxN8gbuibYJi4s1w==}
 
@@ -3710,6 +3762,9 @@ packages:
 
   '@types/semver@7.5.8':
     resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
+
+  '@types/source-list-map@0.1.6':
+    resolution: {integrity: sha512-5JcVt1u5HDmlXkwOD2nslZVllBBc7HDuOICfiZah2Z0is8M8g+ddAEawbmd3VjedfDHBzxCaXLs07QEmb7y54g==}
 
   '@types/stack-utils@2.0.3':
     resolution: {integrity: sha512-9aEbYZ3TbYMznPdcdr3SmIrLXwC/AKZXQeCf9Pgao5CKb8CyHuEX5jzWPTkvregvhRJHcpRO6BFoGW9ycaOkYw==}
@@ -3720,8 +3775,20 @@ packages:
   '@types/styled-components@5.1.34':
     resolution: {integrity: sha512-mmiVvwpYklFIv9E8qfxuPyIt/OuyIrn6gMOAMOFUO3WJfSrSE+sGUoa4PiZj77Ut7bKZpaa6o1fBKS/4TOEvnA==}
 
+  '@types/tapable@1.0.12':
+    resolution: {integrity: sha512-bTHG8fcxEqv1M9+TD14P8ok8hjxoOCkfKc8XXLaaD05kI7ohpeI956jtDOD3XHKBQrlyPughUtzm1jtVhHpA5Q==}
+
   '@types/tough-cookie@4.0.5':
     resolution: {integrity: sha512-/Ad8+nIOV7Rl++6f1BdKxFSMgmoqEoYbHRpPcx3JEfv8VRsQe9Z4mCXeJBzxs7mbHY/XOZZuXlRNfhpVPbs6ZA==}
+
+  '@types/uglify-js@3.17.5':
+    resolution: {integrity: sha512-TU+fZFBTBcXj/GpDpDaBmgWk/gn96kMZ+uocaFUlV2f8a6WdMzzI44QBCmGcCiYR0Y6ZlNRiyUyKKt5nl/lbzQ==}
+
+  '@types/webpack-sources@3.2.3':
+    resolution: {integrity: sha512-4nZOdMwSPHZ4pTEZzSp0AsTM4K7Qmu40UKW4tJDiOVs20UzYF9l+qUe4s0ftfN0pin06n+5cWWDJXH+sbhAiDw==}
+
+  '@types/webpack@4.41.40':
+    resolution: {integrity: sha512-u6kMFSBM9HcoTpUXnL6mt2HSzftqb3JgYV6oxIgL2dl6sX6aCa5k6SOkzv5DuZjBTPUE/dJltKtwwuqrkZHpfw==}
 
   '@types/yargs-parser@21.0.3':
     resolution: {integrity: sha512-I4q9QU9MQv4oEOz4tAHJtNz1cwuLxn2F3xcc2iV5WdqLPpUnj30aUuxt1mAxYTG+oe8CZMV/+6rU4S4gRDzqtQ==}
@@ -5400,6 +5467,9 @@ packages:
     resolution: {integrity: sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==}
     engines: {node: '>=6'}
 
+  eventemitter2@6.4.9:
+    resolution: {integrity: sha512-JEPTiaOt9f04oa6NOkc4aH+nVp5I3wEjpHbIPqfgCdD5v5bUzy7xQqwcVO2aDQgOWhI28da57HksMrzK9HlRxg==}
+
   eventemitter3@4.0.7:
     resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
 
@@ -5749,6 +5819,9 @@ packages:
 
   functions-have-names@1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
+
+  garfish@1.19.3:
+    resolution: {integrity: sha512-PJ507no9bosjFdL2nPAx0qZFeV5ikuTzKe5yUFzex3k6ypflqlT8SkvBBVtPHqWHF5cug74asEa/PsnEwvwdOg==}
 
   gauge@3.0.2:
     resolution: {integrity: sha512-+5J6MS/5XksCuXq++uFRsnUd7Ovu1XenbeuIuNRJxYWjgQbPuFhT14lAvsWfqfAmnwluf1OwMjz39HjfLPci0Q==}
@@ -8119,6 +8192,11 @@ packages:
   react-is@18.3.1:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
 
+  react-loadable@5.5.0:
+    resolution: {integrity: sha512-C8Aui0ZpMd4KokxRdVAm2bQtI03k2RMRNzOB+IipV3yxFTSVICv7WoUr5L9ALB5BmKO1iHgZtWM8EvYG83otdg==}
+    peerDependencies:
+      react: '*'
+
   react-native-css-interop@0.1.22:
     resolution: {integrity: sha512-Mu01e+H9G+fxSWvwtgWlF5MJBJC4VszTCBXopIpeR171lbeBInHb8aHqoqRPxmJpi3xIHryzqKFOJYAdk7PBxg==}
     engines: {node: '>=18'}
@@ -9953,6 +10031,8 @@ snapshots:
 
   '@adobe/css-tools@4.4.0': {}
 
+  '@alioth-org/es-module-lexer@1.1.0': {}
+
   '@alloc/quick-lru@5.2.0': {}
 
   '@ampproject/remapping@2.3.0':
@@ -11525,6 +11605,58 @@ snapshots:
 
   '@floating-ui/utils@0.2.8': {}
 
+  '@garfish/browser-snapshot@1.19.3':
+    dependencies:
+      '@garfish/core': 1.19.3
+      '@garfish/utils': 1.19.3
+    transitivePeerDependencies:
+      - supports-color
+
+  '@garfish/browser-vm@1.19.3':
+    dependencies:
+      '@garfish/core': 1.19.3
+      '@garfish/hooks': 1.19.3
+      '@garfish/loader': 1.19.3
+      '@garfish/utils': 1.19.3
+    transitivePeerDependencies:
+      - supports-color
+
+  '@garfish/core@1.19.3':
+    dependencies:
+      '@alioth-org/es-module-lexer': 1.1.0
+      '@garfish/hooks': 1.19.3
+      '@garfish/loader': 1.19.3
+      '@garfish/utils': 1.19.3
+      eventemitter2: 6.4.9
+    transitivePeerDependencies:
+      - supports-color
+
+  '@garfish/hooks@1.19.3':
+    dependencies:
+      '@garfish/utils': 1.19.3
+    transitivePeerDependencies:
+      - supports-color
+
+  '@garfish/loader@1.19.3':
+    dependencies:
+      '@garfish/hooks': 1.19.3
+      '@garfish/utils': 1.19.3
+    transitivePeerDependencies:
+      - supports-color
+
+  '@garfish/router@1.19.3':
+    dependencies:
+      '@garfish/core': 1.19.3
+      '@garfish/utils': 1.19.3
+    transitivePeerDependencies:
+      - supports-color
+
+  '@garfish/utils@1.19.3':
+    dependencies:
+      debug: 4.3.7
+    transitivePeerDependencies:
+      - supports-color
+
   '@graphql-typed-document-node/core@3.2.0(graphql@15.8.0)':
     dependencies:
       graphql: 15.8.0
@@ -11911,7 +12043,7 @@ snapshots:
       '@swc/helpers': 0.5.1
       redux: 4.2.1
 
-  '@modern-js/app-tools@2.61.0(@rspack/core@1.1.0(@swc/helpers@0.5.13))(@swc/core@1.7.40(@swc/helpers@0.5.13))(encoding@0.1.13)(lightningcss@1.28.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@5.3.11(@babel/core@7.26.0)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(ts-node@10.9.2(@swc/core@1.7.40(@swc/helpers@0.5.13))(@types/node@18.11.19)(typescript@5.0.4))(tsconfig-paths@4.2.0)(type-fest@4.26.1)(typescript@5.0.4)':
+  '@modern-js/app-tools@2.61.0(@rspack/core@1.1.0(@swc/helpers@0.5.13))(@swc/core@1.7.40(@swc/helpers@0.5.13))(@types/webpack@4.41.40)(encoding@0.1.13)(lightningcss@1.28.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@5.3.11(@babel/core@7.26.0)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(ts-node@10.9.2(@swc/core@1.7.40(@swc/helpers@0.5.13))(@types/node@18.11.19)(typescript@5.0.4))(tsconfig-paths@4.2.0)(type-fest@4.26.1)(typescript@5.0.4)':
     dependencies:
       '@babel/parser': 7.26.2
       '@babel/traverse': 7.25.9
@@ -11927,7 +12059,7 @@ snapshots:
       '@modern-js/server-core': 2.61.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@modern-js/server-utils': 2.61.0(@babel/traverse@7.25.9)(@rsbuild/core@1.1.0)
       '@modern-js/types': 2.61.0
-      '@modern-js/uni-builder': 2.61.0(@rspack/core@1.1.0(@swc/helpers@0.5.13))(@swc/core@1.7.40(@swc/helpers@0.5.13))(esbuild@0.17.19)(lightningcss@1.28.1)(styled-components@5.3.11(@babel/core@7.26.0)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(type-fest@4.26.1)(typescript@5.0.4)
+      '@modern-js/uni-builder': 2.61.0(@rspack/core@1.1.0(@swc/helpers@0.5.13))(@swc/core@1.7.40(@swc/helpers@0.5.13))(@types/webpack@4.41.40)(esbuild@0.17.19)(lightningcss@1.28.1)(styled-components@5.3.11(@babel/core@7.26.0)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(type-fest@4.26.1)(typescript@5.0.4)
       '@modern-js/utils': 2.61.0
       '@rsbuild/core': 1.1.0
       '@rsbuild/plugin-node-polyfill': 1.2.0(@rsbuild/core@1.1.0)
@@ -12036,6 +12168,23 @@ snapshots:
       react: 18.3.1
     transitivePeerDependencies:
       - react-dom
+      - supports-color
+
+  '@modern-js/plugin-garfish@2.61.0(@modern-js/runtime@2.61.0(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@modern-js/plugin': 2.61.0
+      '@modern-js/runtime': 2.61.0(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@modern-js/runtime-utils': 2.61.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@modern-js/utils': 2.61.0
+      '@swc/helpers': 0.5.13
+      '@types/debug': 4.1.12
+      '@types/react-loadable': 5.5.11
+      debug: 4.3.7
+      garfish: 1.19.3
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-loadable: 5.5.0(react@18.3.1)
+    transitivePeerDependencies:
       - supports-color
 
   '@modern-js/plugin-i18n@2.61.0':
@@ -12186,14 +12335,14 @@ snapshots:
 
   '@modern-js/types@2.61.0': {}
 
-  '@modern-js/uni-builder@2.61.0(@rspack/core@1.1.0(@swc/helpers@0.5.13))(@swc/core@1.7.40(@swc/helpers@0.5.13))(esbuild@0.17.19)(lightningcss@1.28.1)(styled-components@5.3.11(@babel/core@7.26.0)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(type-fest@4.26.1)(typescript@5.0.4)':
+  '@modern-js/uni-builder@2.61.0(@rspack/core@1.1.0(@swc/helpers@0.5.13))(@swc/core@1.7.40(@swc/helpers@0.5.13))(@types/webpack@4.41.40)(esbuild@0.17.19)(lightningcss@1.28.1)(styled-components@5.3.11(@babel/core@7.26.0)(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1))(type-fest@4.26.1)(typescript@5.0.4)':
     dependencies:
       '@babel/core': 7.26.0
       '@babel/preset-react': 7.25.9(@babel/core@7.26.0)
       '@babel/types': 7.26.0
       '@modern-js/babel-preset': 2.61.0(@rsbuild/core@1.1.0)
       '@modern-js/utils': 2.61.0
-      '@pmmmwh/react-refresh-webpack-plugin': 0.5.15(react-refresh@0.14.2)(type-fest@4.26.1)(webpack@5.96.1(@swc/core@1.7.40(@swc/helpers@0.5.13))(esbuild@0.17.19))
+      '@pmmmwh/react-refresh-webpack-plugin': 0.5.15(@types/webpack@4.41.40)(react-refresh@0.14.2)(type-fest@4.26.1)(webpack@5.96.1(@swc/core@1.7.40(@swc/helpers@0.5.13))(esbuild@0.17.19))
       '@rsbuild/core': 1.1.0
       '@rsbuild/plugin-assets-retry': 1.0.4(@rsbuild/core@1.1.0)
       '@rsbuild/plugin-babel': 1.0.3(@rsbuild/core@1.1.0)
@@ -12591,7 +12740,7 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@pmmmwh/react-refresh-webpack-plugin@0.5.15(react-refresh@0.14.2)(type-fest@4.26.1)(webpack@5.96.1(@swc/core@1.7.40(@swc/helpers@0.5.13))(esbuild@0.17.19))':
+  '@pmmmwh/react-refresh-webpack-plugin@0.5.15(@types/webpack@4.41.40)(react-refresh@0.14.2)(type-fest@4.26.1)(webpack@5.96.1(@swc/core@1.7.40(@swc/helpers@0.5.13))(esbuild@0.17.19))':
     dependencies:
       ansi-html: 0.0.9
       core-js-pure: 3.39.0
@@ -12603,6 +12752,7 @@ snapshots:
       source-map: 0.7.4
       webpack: 5.96.1(@swc/core@1.7.40(@swc/helpers@0.5.13))(esbuild@0.17.19)
     optionalDependencies:
+      '@types/webpack': 4.41.40
       type-fest: 4.26.1
 
   '@radix-ui/number@1.1.0': {}
@@ -14188,6 +14338,10 @@ snapshots:
     dependencies:
       '@types/node': 18.11.19
 
+  '@types/debug@4.1.12':
+    dependencies:
+      '@types/ms': 0.7.34
+
   '@types/eslint-scope@3.7.7':
     dependencies:
       '@types/eslint': 9.6.1
@@ -14247,6 +14401,8 @@ snapshots:
     dependencies:
       '@types/react': 18.3.12
 
+  '@types/ms@0.7.34': {}
+
   '@types/node-forge@1.3.11':
     dependencies:
       '@types/node': 18.11.19
@@ -14270,6 +14426,11 @@ snapshots:
     dependencies:
       '@types/react': 18.3.12
 
+  '@types/react-loadable@5.5.11':
+    dependencies:
+      '@types/react': 18.3.12
+      '@types/webpack': 4.41.40
+
   '@types/react@18.2.79':
     dependencies:
       '@types/prop-types': 15.7.13
@@ -14282,6 +14443,8 @@ snapshots:
 
   '@types/semver@7.5.8': {}
 
+  '@types/source-list-map@0.1.6': {}
+
   '@types/stack-utils@2.0.3': {}
 
   '@types/statuses@2.0.5': {}
@@ -14292,7 +14455,28 @@ snapshots:
       '@types/react': 18.3.12
       csstype: 3.1.3
 
+  '@types/tapable@1.0.12': {}
+
   '@types/tough-cookie@4.0.5': {}
+
+  '@types/uglify-js@3.17.5':
+    dependencies:
+      source-map: 0.6.1
+
+  '@types/webpack-sources@3.2.3':
+    dependencies:
+      '@types/node': 18.11.19
+      '@types/source-list-map': 0.1.6
+      source-map: 0.7.4
+
+  '@types/webpack@4.41.40':
+    dependencies:
+      '@types/node': 18.11.19
+      '@types/tapable': 1.0.12
+      '@types/uglify-js': 3.17.5
+      '@types/webpack-sources': 3.2.3
+      anymatch: 3.1.3
+      source-map: 0.6.1
 
   '@types/yargs-parser@21.0.3': {}
 
@@ -16346,6 +16530,8 @@ snapshots:
 
   event-target-shim@5.0.1: {}
 
+  eventemitter2@6.4.9: {}
+
   eventemitter3@4.0.7: {}
 
   events@3.3.0: {}
@@ -16810,6 +16996,16 @@ snapshots:
       functions-have-names: 1.2.3
 
   functions-have-names@1.2.3: {}
+
+  garfish@1.19.3:
+    dependencies:
+      '@garfish/browser-snapshot': 1.19.3
+      '@garfish/browser-vm': 1.19.3
+      '@garfish/core': 1.19.3
+      '@garfish/router': 1.19.3
+      '@garfish/utils': 1.19.3
+    transitivePeerDependencies:
+      - supports-color
 
   gauge@3.0.2:
     dependencies:
@@ -19636,6 +19832,11 @@ snapshots:
   react-is@17.0.2: {}
 
   react-is@18.3.1: {}
+
+  react-loadable@5.5.0(react@18.3.1):
+    dependencies:
+      prop-types: 15.8.1
+      react: 18.3.1
 
   react-native-css-interop@0.1.22(react-native-reanimated@3.10.1(@babel/core@7.26.0)(react-native@0.74.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.2.79)(encoding@0.1.13)(react@18.2.0))(react@18.2.0))(react-native-safe-area-context@4.10.5(react-native@0.74.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.2.79)(encoding@0.1.13)(react@18.2.0))(react@18.2.0))(react-native-svg@13.4.0(react-native@0.74.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.2.79)(encoding@0.1.13)(react@18.2.0))(react@18.2.0))(react-native@0.74.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@18.2.79)(encoding@0.1.13)(react@18.2.0))(react@18.2.0)(tailwindcss@3.4.14(ts-node@10.9.2(@swc/core@1.7.40(@swc/helpers@0.5.13))(@types/node@18.11.19)(typescript@5.3.3))):
     dependencies:
