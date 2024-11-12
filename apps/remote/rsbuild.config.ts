@@ -10,7 +10,6 @@ export default defineConfig({
       exposes: {
         "./button": "./src/exposes/button.tsx",
         "./store": "./src/exposes/store.tsx",
-        "./bridge": "./src/exposes/bridge.tsx",
       },
       shared: {
         react: { singleton: true },

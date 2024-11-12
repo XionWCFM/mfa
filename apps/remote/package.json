@@ -10,12 +10,12 @@
   },
   "dependencies": {
     "@module-federation/enhanced": "^0.7.1",
-    "@webview-bridge/web": "^1.7.2",
+    "@internal/bridge": "workspace:*",
+    "@internal/bridge-web": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@mf-xion/mobile": "workspace:^",
     "@module-federation/rsbuild-plugin": "^0.7.1",
     "@rsbuild/core": "^1.0.19",
     "@rsbuild/plugin-react": "^1.0.6",
