@@ -1,5 +1,5 @@
 {
-  "name": "@internal/http",
+  "name": "@internal/token",
   "private": true,
   "version": "0.0.0",
   "type": "module",
