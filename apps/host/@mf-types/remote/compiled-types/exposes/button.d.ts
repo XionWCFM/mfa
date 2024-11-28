@@ -1,4 +1,4 @@
-import { LinkType, Router } from "@internal/router";
+import { LinkType, Router } from "@repo/router";
 type Props = {
     router?: Router;
     Link?: LinkType;

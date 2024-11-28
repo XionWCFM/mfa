@@ -14,10 +14,10 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@internal/http": "workspace:*",
-    "@internal/router": "workspace:*",
-    "@internal/providers": "workspace:*",
-    "@xionwcfm/typescript-config": "workspace:*",
+    "@repo/http": "workspace:*",
+    "@repo/router": "workspace:*",
+    "@repo/providers": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "@hookform/resolvers": "^3.9.1",
     "@modern-js/runtime": "2.61.0",
     "@module-federation/modern-js": "^0.7.1",
@@ -37,7 +37,7 @@
     "@modern-js/plugin-garfish": "2.61.0"
   },
   "devDependencies": {
-    "@internal/test-utils": "workspace:*",
+    "@repo/test-utils": "workspace:*",
     "@modern-js/app-tools": "2.61.0",
     "@modern-js/tsconfig": "2.61.0",
     "@tanstack/react-query-devtools": "^5.59.20",
@@ -63,6 +63,6 @@
     "vite-tsconfig-paths": "^5.1.2",
     "vitest": "^2.0.5",
     "vitest-fetch-mock": "^0.4.2",
-    "@xionwcfm/typescript-config": "workspace:*"
+    "@repo/typescript-config": "workspace:*"
   }
 }
