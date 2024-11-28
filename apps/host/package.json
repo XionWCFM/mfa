@@ -10,7 +10,7 @@
     "serve": "modern serve",
     "new": "modern new",
     "upgrade": "modern upgrade",
-    "test:ci": "vitest run",
+    "ci:test": "vitest run",
     "test": "vitest"
   },
   "dependencies": {
