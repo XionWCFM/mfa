@@ -207,9 +207,15 @@ importers:
       '@module-federation/enhanced':
         specifier: ^0.7.7
         version: 0.7.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(webpack@5.96.1)
+      '@repo/http':
+        specifier: workspace:*
+        version: link:../../packages/http
       '@repo/router':
         specifier: workspace:*
         version: link:../../packages/router
+      '@repo/test-utils':
+        specifier: workspace:*
+        version: link:../../packages/test-utils
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -239,7 +245,7 @@ importers:
         specifier: ^18.3.12
         version: 18.3.12
       '@types/react-dom':
-        specifier: ^18.3.1
+        specifier: ~18.3.1
         version: 18.3.1
       '@xionwcfm/jotai':
         specifier: ^0.2.0

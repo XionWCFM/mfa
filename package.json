@@ -15,7 +15,9 @@
     "format:biome": "npx @biomejs/biome format --write .",
     "clean:all": "rm -rf node_modules && rm -rf apps/*/node_modules && rm -rf packages/*/node_modules && pnpm store prune && pnpm install",
     "dev:hosts": "pnpm --filter \"./host\" dev",
-    "bump-deps": "pnpm dlx npm-check-updates --deep -u -x tailwind-merge && pnpm install",
+    "bump-deps": "pnpm run bump-deps:project && pnpm run bump-deps:templates",
+    "bump-deps:project": "pnpm dlx npm-check-updates && pnpm install",
+    "bump-deps:templates": "pnpm dlx npm-check-updates --cwd .templates && pnpm --prefix .templates install",
     "gen:p": "tsx .cli/package.ts"
   },
   "devDependencies": {
