@@ -9,28 +9,28 @@
     "preview": "rsbuild preview"
   },
   "dependencies": {
-    "@module-federation/enhanced": "^0.7.1",
+    "@module-federation/enhanced": "^0.7.7",
     "@repo/router": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@module-federation/rsbuild-plugin": "^0.7.1",
-    "@rsbuild/core": "^1.0.19",
-    "@rsbuild/plugin-react": "^1.0.6",
-    "@suspensive/react": "^2.18.4",
-    "@tanstack/react-query": "^5.59.20",
+    "@module-federation/rsbuild-plugin": "^0.7.7",
+    "@rsbuild/core": "^1.1.6",
+    "@rsbuild/plugin-react": "^1.0.7",
+    "@suspensive/react": "^2.18.7",
+    "@tanstack/react-query": "^5.61.5",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "@xionwcfm/jotai": "^0.1.5",
-    "@xionwcfm/react": "^0.1.0",
+    "@xionwcfm/jotai": "^0.2.0",
+    "@xionwcfm/react": "^0.1.1",
     "@xionwcfm/token": "^0.2.0",
     "@xionwcfm/xds": "^0.2.0",
-    "es-toolkit": "^1.26.1",
-    "jotai": "^2.10.1",
+    "es-toolkit": "^1.27.0",
+    "jotai": "^2.10.3",
     "overlay-kit": "^1.4.1",
     "react-hook-form": "^7.53.2",
-    "typescript": "^5.6.3",
+    "typescript": "^5.7.2",
     "zod": "^3.23.8"
   }
 }

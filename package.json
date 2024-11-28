@@ -14,20 +14,21 @@
     "check:biome": "npx @biomejs/biome check --write .",
     "format:biome": "npx @biomejs/biome format --write .",
     "clean:all": "rm -rf node_modules && rm -rf apps/*/node_modules && rm -rf packages/*/node_modules && pnpm store prune && pnpm install",
-    "dev:hosts": "pnpm --filter \"./host\" dev"
+    "dev:hosts": "pnpm --filter \"./host\" dev",
+    "bump-deps": "pnpm dlx npm-check-updates --deep -u -x tailwind-merge && pnpm install"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.3",
+    "@biomejs/biome": "1.9.4",
     "@repo/typescript-config": "workspace:*",
     "browser-sync": "^3.0.3",
-    "concurrently": "^9.0.1",
-    "kill-port": "^1.6.1",
-    "prettier": "^3.2.5",
+    "concurrently": "^9.1.0",
+    "kill-port": "^2.0.1",
+    "prettier": "^3.4.1",
     "turbo": "^2.3.3",
-    "typescript": "^5.6.2",
-    "vitest": "^2.0.5"
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.6"
   },
-  "packageManager": "pnpm@9.12.0",
+  "packageManager": "pnpm@9.14.2",
   "engines": {
     "node": ">=18"
   }
