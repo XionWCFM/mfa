@@ -1,6 +1,6 @@
-import 'server-only';
-import { env } from '@repo/env';
-import { PostHog } from 'posthog-node';
+import "server-only";
+import { env } from "@repo/env";
+import { PostHog } from "posthog-node";
 
 export const analytics = new PostHog(env.PUBLIC_POSTHOG_KEY, {
   host: env.PUBLIC_POSTHOG_HOST,

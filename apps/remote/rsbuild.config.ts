@@ -25,6 +25,7 @@ export default defineConfig({
         "es-toolkit": { singleton: true },
         "overlay-kit": { singleton: true },
         "@repo/router": { singleton: true },
+        "@repo/http": { singleton: true },
       },
     }),
   ],
