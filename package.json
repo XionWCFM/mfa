@@ -15,15 +15,22 @@
     "format:biome": "npx @biomejs/biome format --write .",
     "clean:all": "rm -rf node_modules && rm -rf apps/*/node_modules && rm -rf packages/*/node_modules && pnpm store prune && pnpm install",
     "dev:hosts": "pnpm --filter \"./host\" dev",
-    "bump-deps": "pnpm dlx npm-check-updates --deep -u -x tailwind-merge && pnpm install"
+    "bump-deps": "pnpm dlx npm-check-updates --deep -u -x tailwind-merge && pnpm install",
+    "gen:p": "tsx .cli/package.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
     "@repo/typescript-config": "workspace:*",
+    "@types/fs-extra": "^11.0.4",
     "browser-sync": "^3.0.3",
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
     "concurrently": "^9.1.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^12.1.0",
     "kill-port": "^2.0.1",
     "prettier": "^3.4.1",
+    "tsx": "^4.19.2",
     "turbo": "^2.3.3",
     "typescript": "^5.7.2",
     "vitest": "^2.1.6"
