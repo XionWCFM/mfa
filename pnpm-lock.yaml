@@ -59,9 +59,6 @@ importers:
       '@repo/router':
         specifier: workspace:*
         version: link:../../packages/router
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../../configs/typescript
       '@suspensive/react':
         specifier: ^2.18.7
         version: 2.18.7(react@18.3.1)
@@ -111,6 +108,9 @@ importers:
       '@repo/test-utils':
         specifier: workspace:*
         version: link:../../packages/test-utils
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../../configs/typescript
       '@tanstack/react-query-devtools':
         specifier: ^5.61.5
         version: 5.61.5(@tanstack/react-query@5.61.5(react@18.3.1))(react@18.3.1)
@@ -199,6 +199,9 @@ importers:
       '@module-federation/rsbuild-plugin':
         specifier: ^0.7.7
         version: 0.7.7(@module-federation/enhanced@0.7.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.2)(webpack@5.96.1))(@rsbuild/core@1.1.6)
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../../configs/typescript
       '@rsbuild/core':
         specifier: ^1.1.6
         version: 1.1.6

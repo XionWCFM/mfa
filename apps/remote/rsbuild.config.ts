@@ -24,6 +24,7 @@ export default defineConfig({
         zod: { singleton: true },
         "es-toolkit": { singleton: true },
         "overlay-kit": { singleton: true },
+        "@repo/router": { singleton: true },
       },
     }),
   ],
