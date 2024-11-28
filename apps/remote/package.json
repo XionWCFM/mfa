@@ -10,8 +10,6 @@
   },
   "dependencies": {
     "@module-federation/enhanced": "^0.7.1",
-    "@repo/bridge": "workspace:*",
-    "@repo/bridge-web": "workspace:*",
     "@repo/router": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
