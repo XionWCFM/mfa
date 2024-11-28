@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@next/third-parties": "^15.0.3",
     "@repo/env": "workspace:*",
     "posthog-js": "^1.190.2",
     "posthog-node": "^4.3.1",
