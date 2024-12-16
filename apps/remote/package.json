@@ -9,7 +9,7 @@
     "preview": "rsbuild preview"
   },
   "dependencies": {
-    "@module-federation/enhanced": "^0.7.7",
+    "@module-federation/enhanced": "^0.8.4",
     "@repo/router": "workspace:*",
     "@repo/http": "workspace:*",
     "@repo/test-utils": "workspace:*",
@@ -18,22 +18,22 @@
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
-    "@module-federation/rsbuild-plugin": "^0.7.7",
-    "@rsbuild/core": "^1.1.6",
-    "@rsbuild/plugin-react": "^1.0.7",
-    "@suspensive/react": "^2.18.7",
-    "@tanstack/react-query": "^5.61.5",
+    "@module-federation/rsbuild-plugin": "^0.8.4",
+    "@rsbuild/core": "^1.1.10",
+    "@rsbuild/plugin-react": "^1.1.0",
+    "@suspensive/react": "^2.18.10",
+    "@tanstack/react-query": "^5.62.7",
     "@types/react": "^18.3.12",
     "@types/react-dom": "~18.3.1",
-    "@xionwcfm/jotai": "^0.2.0",
+    "@xionwcfm/jotai": "^0.3.1",
     "@xionwcfm/react": "^0.1.1",
     "@xionwcfm/token": "^0.2.0",
     "@xionwcfm/xds": "^0.2.0",
-    "es-toolkit": "^1.27.0",
+    "es-toolkit": "^1.30.1",
     "jotai": "^2.10.3",
     "overlay-kit": "^1.4.1",
-    "react-hook-form": "^7.53.2",
+    "react-hook-form": "^7.54.1",
     "typescript": "^5.7.2",
-    "zod": "^3.23.8"
+    "zod": "^3.24.1"
   }
 }

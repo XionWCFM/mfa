@@ -13,13 +13,13 @@ async function createPackage() {
     {
       type: "input",
       name: "projectName",
-      message: "프로젝트 이름을 뭘로하실건가요?",
-      validate: (input: string) => !!input || "프로젝트 이름을 입력하세요.",
+      message: "Enter a package name",
+      validate: (input: string) => !!input || "Enter a package name",
     },
     {
       type: "list",
       name: "tsconfig",
-      message: "tsconfig 머 쓸거에요?",
+      message: "Choose a tsconfig",
       choices: ["base.json", "react-library.json", "nextjs.json"],
     },
   ]);

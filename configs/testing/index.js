@@ -5,11 +5,10 @@ const { defineConfig } = require("vitest/config");
 const config = defineConfig({
   plugins: [react()],
   test: {
-    environment: "jsdom",
+    environment: "happydom",
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./"),
       "@repo": path.resolve(__dirname, "../../packages"),
     },
   },
