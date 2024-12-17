@@ -1,6 +1,7 @@
 import { type MatcherFunction, render } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 
+import { Providers } from "@repo/providers";
 import type { PropsWithChildren } from "react";
 
 const createRender = (wrapper: (param: PropsWithChildren) => JSX.Element) => {
@@ -34,4 +35,6 @@ const textContentMatcher = (textMatch: string | RegExp): MatcherFunction => {
   };
 };
 
-export { createRender, textContentMatcher };
+const renderWithUser = createRender(Providers);
+
+export { createRender, textContentMatcher, renderWithUser };

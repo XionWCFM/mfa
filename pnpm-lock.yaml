@@ -126,6 +126,9 @@ importers:
       '@modern-js/tsconfig':
         specifier: 2.63.2
         version: 2.63.2
+      '@repo/mocks':
+        specifier: workspace:*
+        version: link:../../packages/shared/mocks
       '@repo/test-utils':
         specifier: workspace:*
         version: link:../../packages/shared/test-utils
@@ -300,7 +303,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: ^4.3.4
-        version: 4.3.4(vite@6.0.3(@types/node@22.10.2)(jiti@1.21.6)(lightningcss@1.28.1)(sass-embedded@1.83.0)(terser@5.36.0)(tsx@4.19.2)(yaml@2.6.1))
+        version: 4.3.4(vite@5.4.11(@types/node@22.10.2)(lightningcss@1.28.1)(sass-embedded@1.83.0)(terser@5.36.0))
       vitest:
         specifier: ^2.1.8
         version: 2.1.8(@types/node@22.10.2)(happy-dom@15.11.7)(jsdom@20.0.3)(lightningcss@1.28.1)(msw@2.7.0(@types/node@22.10.2)(typescript@5.7.2))(sass-embedded@1.83.0)(terser@5.36.0)
@@ -370,6 +373,22 @@ importers:
         specifier: ~5.7.2
         version: 5.7.2
 
+  packages/shared/mocks:
+    dependencies:
+      ky:
+        specifier: ^1.7.3
+        version: 1.7.3
+      msw:
+        specifier: ^2.7.0
+        version: 2.7.0(@types/node@22.10.2)(typescript@5.7.2)
+    devDependencies:
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../../../configs/typescript
+      typescript:
+        specifier: ~5.7.2
+        version: 5.7.2
+
   packages/shared/providers:
     dependencies:
       '@suspensive/react':
@@ -427,6 +446,10 @@ importers:
         version: 5.7.2
 
   packages/shared/test-utils:
+    dependencies:
+      '@repo/providers':
+        specifier: workspace:*
+        version: link:../providers
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*
@@ -11195,6 +11218,17 @@ snapshots:
       resolve-from: 5.0.0
     transitivePeerDependencies:
       - encoding
+      - supports-color
+
+  '@vitejs/plugin-react@4.3.4(vite@5.4.11(@types/node@22.10.2)(lightningcss@1.28.1)(sass-embedded@1.83.0)(terser@5.36.0))':
+    dependencies:
+      '@babel/core': 7.26.0
+      '@babel/plugin-transform-react-jsx-self': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-transform-react-jsx-source': 7.25.9(@babel/core@7.26.0)
+      '@types/babel__core': 7.20.5
+      react-refresh: 0.14.2
+      vite: 5.4.11(@types/node@22.10.2)(lightningcss@1.28.1)(sass-embedded@1.83.0)(terser@5.36.0)
+    transitivePeerDependencies:
       - supports-color
 
   '@vitejs/plugin-react@4.3.4(vite@6.0.3(@types/node@22.10.2)(jiti@1.21.6)(lightningcss@1.28.1)(sass-embedded@1.83.0)(terser@5.36.0)(tsx@4.19.2)(yaml@2.6.1))':

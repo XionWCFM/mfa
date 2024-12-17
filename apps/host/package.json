@@ -37,6 +37,7 @@
     "@modern-js/plugin-garfish": "2.63.2"
   },
   "devDependencies": {
+    "@repo/mocks": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@repo/test-utils": "workspace:*",
     "@modern-js/app-tools": "2.63.2",

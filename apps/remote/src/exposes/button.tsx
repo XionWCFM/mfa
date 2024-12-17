@@ -1,12 +1,7 @@
-import { type LinkType, type Router, useInternalRouter } from "@repo/router";
+import { useInternalRouter } from "@repo/router";
 import { useCount } from "./store";
 
-type Props = {
-  router?: Router;
-  Link?: LinkType;
-};
-
-export default function Button(_props: Props) {
+export default function Button() {
   const { count } = useCount();
   const router = useInternalRouter();
   return (

@@ -14,7 +14,7 @@ export const Providers = ({ children }: PropsWithChildren) => {
             throwOnError: true,
             staleTime: 1000 * 60 * 5,
             gcTime: 1000 * 60 * 10,
-            retry: 3,
+            retry: 1,
           },
         },
       }),
