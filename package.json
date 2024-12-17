@@ -3,22 +3,27 @@
   "private": true,
   "scripts": {
     "stop": "kill-port --port 5100,5101,5102",
+
     "build": "turbo build",
     "build:p": "turbo build --filter './packages/*'",
+
     "dev": "turbo dev",
+    "dev:hosts": "pnpm --filter \"./host\" dev",
     "storybook": "turbo storybook",
+
     "lint": "turbo lint",
     "test": "turbo run test",
+
     "ci:test": "turbo run test:ci",
-    "lint:biome": "npx @biomejs/biome lint .",
-    "check:biome": "npx @biomejs/biome check --write .",
-    "format:biome": "npx @biomejs/biome format --write .",
-    "clean:all": "rm -rf node_modules && rm -rf apps/*/node_modules && rm -rf packages/*/node_modules && pnpm store prune && pnpm install",
-    "dev:hosts": "pnpm --filter \"./host\" dev",
+
+    "check:biome": "npx @biomejs/biome check --config-path=./biome-ci.json --diagnostic-level=error --write .",
+
     "bump-deps": "pnpm run bump-deps:project && pnpm run bump-deps:templates",
     "bump-deps:project": "pnpm dlx npm-check-updates && pnpm install",
     "bump-deps:templates": "pnpm dlx npm-check-updates --cwd .templates && pnpm --prefix .templates install",
-    "gen:p": "tsx .cli/package.ts"
+
+    "gen:p": "tsx .cli/package.ts",
+    "clean:all": "rm -rf node_modules && rm -rf apps/*/node_modules && rm -rf packages/*/node_modules && pnpm store prune && pnpm install"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
