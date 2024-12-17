@@ -2,6 +2,9 @@
   "name": "@repo/env",
   "version": "0.0.0",
   "private": true,
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "dependencies": {
     "@t3-oss/env-core": "^0.11.1",
     "zod": "^3.24.1"

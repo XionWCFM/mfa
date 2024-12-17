@@ -11,7 +11,7 @@
     "ky": "^1.7.3"
   },
   "devDependencies": {
-    "@repo/typescript-config": "workspace:*",
-    "typescript": "~5.7.2"
+    "typescript": "~5.7.2",
+    "@repo/typescript-config": "workspace:*"
   }
 }

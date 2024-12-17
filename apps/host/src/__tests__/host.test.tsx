@@ -4,12 +4,12 @@ import { useSuspenseQuery } from "@tanstack/react-query";
 import { screen, waitFor } from "@testing-library/dom";
 
 const Component = () => {
-  const { data } = useSuspenseQuery<{ id: string; firstName: string; lastName: string }>({
+  const { data } = useSuspenseQuery({
     queryKey: ["user"],
-    queryFn: () => http.get("https://example.com/user"),
+    queryFn: () => http.get<{ firstName: string }>("https://example.com/user"),
   });
 
-  return <div>{data?.firstName}</div>;
+  return <div>{data?.data?.firstName}</div>;
 };
 describe("MSW Test", () => {
   it("MSW working", async () => {
