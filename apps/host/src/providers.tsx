@@ -1,7 +1,7 @@
 import { useLocation, useNavigate, useParams, useRouteError } from "@modern-js/runtime/router";
 import { Providers as DefaultProviders } from "@repo/providers";
-import { LocationContext, ParamsContext, RouteErrorContext, Router, RouterContext } from "@repo/router";
-import { PropsWithChildren, useMemo } from "react";
+import { LocationContext, ParamsContext, RouteErrorContext, type Router, RouterContext } from "@repo/router";
+import { type PropsWithChildren, useMemo } from "react";
 
 export const Providers = ({ children }: PropsWithChildren) => {
   return (
@@ -22,7 +22,6 @@ const RouterProvider = ({ children }: PropsWithChildren) => {
   const router: Router = useMemo(() => {
     return {
       push: (to, options) => {
-        console.log("push");
         navigate(to, { ...options });
       },
       replace: (to, options) => {

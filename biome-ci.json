@@ -8,7 +8,7 @@
         "noConsole": {
           "level": "error",
           "fix": "safe",
-          "options": { "allow": ["error"] }
+          "options": { "allow": ["error", "warn"] }
         },
         "noGlobalIsNan": {
           "fix": "safe",

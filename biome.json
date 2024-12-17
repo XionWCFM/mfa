@@ -173,7 +173,8 @@
       "**/.expo",
       "**/ios",
       "**/android",
-      "**/storybook-static"
+      "**/storybook-static",
+      "**/@mf-types/*"
     ]
   }
 }

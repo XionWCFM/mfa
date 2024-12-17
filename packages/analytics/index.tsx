@@ -6,7 +6,5 @@ type AnalyticsProviderProps = {
 };
 
 export const AnalyticsProvider = ({ children }: AnalyticsProviderProps) => (
-  <PostHogProvider>
-    {children}
-  </PostHogProvider>
+  <PostHogProvider>{children}</PostHogProvider>
 );

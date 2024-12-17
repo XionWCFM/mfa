@@ -2,7 +2,7 @@ import { DefaultProps, DefaultPropsProvider, ErrorBoundary, Suspense } from "@su
 import { QueryClient, QueryClientProvider, QueryErrorResetBoundary } from "@tanstack/react-query";
 import { Provider } from "jotai";
 import { OverlayProvider } from "overlay-kit";
-import { PropsWithChildren, useState } from "react";
+import { type PropsWithChildren, useState } from "react";
 
 export const Providers = ({ children }: PropsWithChildren) => {
   const [defaultProps] = useState(() => new DefaultProps({ Delay: { ms: 200 } }));

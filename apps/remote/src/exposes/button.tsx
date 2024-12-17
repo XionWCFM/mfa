@@ -1,4 +1,4 @@
-import { LinkType, Router, useInternalRouter } from "@repo/router";
+import { type LinkType, type Router, useInternalRouter } from "@repo/router";
 import { useCount } from "./store";
 
 type Props = {
@@ -6,7 +6,7 @@ type Props = {
   Link?: LinkType;
 };
 
-export default function Button(props: Props) {
+export default function Button(_props: Props) {
   const { count } = useCount();
   const router = useInternalRouter();
   return (
@@ -14,7 +14,6 @@ export default function Button(props: Props) {
       리모트앱 {count}
       <button
         onClick={() => {
-          console.log("리모트 console");
           router?.push("/login");
         }}
       >
