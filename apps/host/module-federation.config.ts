@@ -1,6 +1,8 @@
 import { createModuleFederationConfig } from "@module-federation/modern-js";
 
-const config = createModuleFederationConfig({
+type ModuleFederationConfig = ReturnType<typeof createModuleFederationConfig>;
+
+const config: ModuleFederationConfig = createModuleFederationConfig({
   name: "host",
   remotes: {
     remote: "remote@http://localhost:5101/mf-manifest.json",
@@ -18,7 +20,9 @@ const config = createModuleFederationConfig({
     zod: { singleton: true },
     "es-toolkit": { singleton: true },
     "overlay-kit": { singleton: true },
+    "@repo/router": { singleton: true },
+    "@repo/http": { singleton: true },
   },
-}) as any;
+});
 
 export default config;

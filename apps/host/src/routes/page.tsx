@@ -1,15 +1,12 @@
-import { Link } from "@modern-js/runtime/router";
-import { useSuspenseQuery } from "@tanstack/react-query";
+import { Suspense } from "@suspensive/react";
 import Hi from "remote/button";
-import { useCount } from "remote/store";
 
 const Index = () => {
-  const { data } = useSuspenseQuery({ queryKey: ["test"], queryFn: () => Promise.resolve("test") });
-  const { count, increment } = useCount();
-
   return (
     <div className="container-box">
-      <Hi Link={Link} />
+      <Suspense fallback={<div>loading...</div>}>
+        <Hi />
+      </Suspense>
       <button onClick={() => {}}>로그인 클릭</button>
     </div>
   );

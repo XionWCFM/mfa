@@ -1,20 +1,19 @@
-import { LinkType, Router } from "@internal/router";
-import { useCount } from "./store.js";
+import { useInternalRouter } from "@repo/router";
+import { useCount } from "./store";
 
-type Props = {
-  router?: Router;
-  Link?: LinkType;
-};
-
-export default function Button(props: Props) {
+export default function Button() {
   const { count } = useCount();
-  const { router, Link = () => null } = props;
-
+  const router = useInternalRouter();
   return (
     <div>
-      <Link to={"/login"}>hello </Link>
       리모트앱 {count}
-      <button onClick={() => router?.push("/login")}>라우팅</button>
+      <button
+        onClick={() => {
+          router?.push("/login");
+        }}
+      >
+        라우팅
+      </button>
     </div>
   );
 }

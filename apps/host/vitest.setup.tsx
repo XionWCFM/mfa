@@ -1,6 +1,6 @@
+import { server } from "@repo/mocks/server";
 import { vi } from "vitest";
 import createFetchMock from "vitest-fetch-mock";
-import { server } from "./src/mocks/node.js";
 import "@testing-library/jest-dom";
 import "@testing-library/jest-dom/vitest";
 import { cleanup } from "@testing-library/react";

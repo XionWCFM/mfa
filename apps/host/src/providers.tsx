@@ -1,7 +1,7 @@
-import { Providers as DefaultProviders } from "@internal/providers";
-import { LocationContext, ParamsContext, RouteErrorContext, Router, RouterContext } from "@internal/router";
 import { useLocation, useNavigate, useParams, useRouteError } from "@modern-js/runtime/router";
-import { PropsWithChildren, useMemo } from "react";
+import { Providers as DefaultProviders } from "@repo/providers";
+import { LocationContext, ParamsContext, RouteErrorContext, type Router, RouterContext } from "@repo/router";
+import { type PropsWithChildren, useMemo } from "react";
 
 export const Providers = ({ children }: PropsWithChildren) => {
   return (

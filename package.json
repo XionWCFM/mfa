@@ -2,40 +2,47 @@
   "name": "turbo-repo",
   "private": true,
   "scripts": {
-    "watch:browser": "node bs-config.js",
-    "watch": "turbo run build -- --watch",
-    "serve": "pnpm --parallel --filter \"./**\" preview",
     "stop": "kill-port --port 5100,5101,5102",
+
     "build": "turbo build",
     "build:p": "turbo build --filter './packages/*'",
-    "build:actions": "turbo build --filter './packages/actions'",
+
     "dev": "turbo dev",
+    "dev:hosts": "pnpm --filter \"./host\" dev",
     "storybook": "turbo storybook",
-    "push:origin": "git push origin $(git symbolic-ref --short HEAD)",
+
     "lint": "turbo lint",
     "test": "turbo run test",
-    "test:ci": "turbo run test:ci",
-    "lint:biome": "npx @biomejs/biome lint .",
-    "check:biome": "npx @biomejs/biome check --write .",
-    "format:biome": "npx @biomejs/biome format --write .",
-    "clean:all": "rm -rf node_modules && rm -rf apps/*/node_modules && rm -rf packages/*/node_modules && pnpm store prune && pnpm install",
-    "comment:ci": "node ./.github/scripts/comment-ci.js",
-    "build:remotes": "pnpm --parallel --filter \"./remote\" build",
-    "serve:remotes": "pnpm --parallel --filter \"./remote\" serve",
-    "dev:hosts": "pnpm --filter \"./host\" dev"
+
+    "ci:test": "turbo run test:ci",
+
+    "check:biome": "npx @biomejs/biome check --config-path=./biome-ci.json --diagnostic-level=error --write .",
+
+    "bump-deps": "pnpm run bump-deps:project && pnpm run bump-deps:templates",
+    "bump-deps:project": "pnpm dlx npm-check-updates && pnpm install",
+    "bump-deps:templates": "pnpm dlx npm-check-updates --cwd .templates && pnpm --prefix .templates install",
+
+    "gen:p": "tsx .cli/package.ts",
+    "clean:all": "rm -rf node_modules && rm -rf apps/*/node_modules && rm -rf packages/*/node_modules && pnpm store prune && pnpm install"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.3",
-    "@xionwcfm/typescript-config": "workspace:*",
+    "@biomejs/biome": "1.9.4",
+    "@repo/typescript-config": "workspace:*",
+    "@types/fs-extra": "^11.0.4",
     "browser-sync": "^3.0.3",
-    "concurrently": "^9.0.1",
-    "kill-port": "^1.6.1",
-    "prettier": "^3.2.5",
-    "turbo": "^2.2.3",
-    "typescript": "^5.6.2",
-    "vitest": "^2.0.5"
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "concurrently": "^9.1.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^12.2.0",
+    "kill-port": "^2.0.1",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
   },
-  "packageManager": "pnpm@9.12.0",
+  "packageManager": "pnpm@9.15.0",
   "engines": {
     "node": ">=18"
   }
