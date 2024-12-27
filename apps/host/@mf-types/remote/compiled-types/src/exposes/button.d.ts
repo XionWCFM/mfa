@@ -1,8 +1,2 @@
-import { type LinkType, type Router } from "@repo/router";
-type Props = {
-    router?: Router;
-    Link?: LinkType;
-};
-export default function Button(_props: Props): import("react").JSX.Element;
-export {};
+export default function Button(): import("react").JSX.Element;
 //# sourceMappingURL=button.d.ts.map

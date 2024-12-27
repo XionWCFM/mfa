@@ -5,7 +5,7 @@ type ModuleFederationConfig = ReturnType<typeof createModuleFederationConfig>;
 const config: ModuleFederationConfig = createModuleFederationConfig({
   name: "host",
   remotes: {
-    remote: "remote@http://localhost:5101/mf-manifest.json",
+    remote: "federation_provider@http://localhost:5101/remoteEntry.js",
   },
   shared: {
     react: { singleton: true },
