@@ -10,7 +10,7 @@
     "./handlers": "./src/handlers/index.ts"
   },
   "dependencies": {
-    "ky": "^1.7.3",
+    "ky": "^1.7.4",
     "msw": "^2.7.0"
   },
   "devDependencies": {
