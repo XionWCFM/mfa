@@ -12,7 +12,7 @@ export default defineConfig({
         "./button": "./src/button.tsx",
       },
       shared: ["react", "react-dom"],
-      getPublicPath: "https://feda.vercel.app/",
+      getPublicPath: `function() {return "https://feda.vercel.app/"}`,
     }),
   ],
   server: {
