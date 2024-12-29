@@ -3,6 +3,9 @@ import { defineConfig } from "@rsbuild/core";
 import { pluginReact } from "@rsbuild/plugin-react";
 
 export default defineConfig({
+  output: {
+    assetPrefix: "https://feda.vercel.app/",
+  },
   plugins: [
     pluginReact(),
     pluginModuleFederation({
@@ -12,7 +15,6 @@ export default defineConfig({
         "./button": "./src/button.tsx",
       },
       shared: ["react", "react-dom"],
-      getPublicPath: `function() {return "https://feda.vercel.app/"}`,
     }),
   ],
   server: {
