@@ -8,11 +8,11 @@ export default defineConfig({
     pluginModuleFederation({
       name: "federation_provider",
       filename: "remoteEntry.js",
-
       exposes: {
         "./button": "./src/button.tsx",
       },
       shared: ["react", "react-dom"],
+      getPublicPath: `function() {return "https://feda.vercel.app/"}`,
     }),
   ],
   server: {
