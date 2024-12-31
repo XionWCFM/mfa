@@ -4,7 +4,7 @@ import { pluginReact } from "@rsbuild/plugin-react";
 
 export default defineConfig({
   output: {
-    assetPrefix: "https://feda.vercel.app/",
+    assetPrefix: "https://remote2.xionwcfm.com/",
   },
   plugins: [
     pluginReact(),

@@ -6,7 +6,7 @@ const config: ModuleFederationConfig = createModuleFederationConfig({
   name: "host",
   remotes: {
     // remote: "federation_provider@http://localhost:5101/mf-manifest.json",
-    remote: "federation_provider@https://feda.vercel.app/mf-manifest.json",
+    remote: "federation_provider@https://remote2.xionwcfm.com/mf-manifest.json",
   },
   shared: {
     react: { singleton: true, eager: true },
