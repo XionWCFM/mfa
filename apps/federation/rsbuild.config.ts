@@ -1,10 +1,11 @@
 import { pluginModuleFederation } from "@module-federation/rsbuild-plugin";
+import { env } from "@repo/env";
 import { defineConfig } from "@rsbuild/core";
 import { pluginReact } from "@rsbuild/plugin-react";
 
 export default defineConfig({
   output: {
-    assetPrefix: "https://remote2.xionwcfm.com/",
+    assetPrefix: env.FEDERATION_REMOTE_URL,
   },
   plugins: [
     pluginReact(),
