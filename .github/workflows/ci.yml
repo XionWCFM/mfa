@@ -54,6 +54,7 @@ jobs:
       - name: Inject env
         run: |
           echo "FEDERATION_REMOTE_URL=${{ env.FEDERATION_REMOTE_URL }}" >> apps/federation/.env
+          echo "FEDERATION_REMOTE_URL=${{ env.FEDERATION_REMOTE_URL }}" >> apps/host/.env
 
       - name: Build
         run: pnpm run build
