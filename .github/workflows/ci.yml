@@ -50,7 +50,11 @@ jobs:
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit == false
         run: pnpm install --frozen-lockfile
- 
+      
+      - name: Inject env
+        run: |
+          echo "FEDERATION_REMOTE_URL=${{ env.FEDERATION_REMOTE_URL }}" >> apps/federation/.env
+
       - name: Build
         run: pnpm run build
  
